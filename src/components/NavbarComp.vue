@@ -3,37 +3,25 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <img src="../assets/hair-affairs-high-resolution-color-logo.png" alt="logo">
-            <a class="navbar-brand" href="#">Hair Affairs</a>
+            <a class="navbar-brand" href="#" style="color: yellow;">H A I R   A F F A I R S</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <router-link to="/"><i class="fa-solid fa-house-user"></i>HOME</router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our Products</a>
-                  
+                  <router-link to="/Products"><i class="fa fa-store"></i>PRODUCTS</router-link>
                 </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Admin</a></li>
-                <li class="nave-item"><a class="nav-link" href="#">Contact</a></li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hair
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Straight Hair</a></li>
-                    <li><a class="dropdown-item" href="#">Curly Hair</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Body Wave Hair</a></li>
-                  </ul>
-                </li>
+                <router-link to="/Admin"><i class="fa-solid fa-lock"></i>ADMIN</router-link>
+                <router-link to="/Contact"><i class="fa-solid fa-address-book"></i>CONTACT</router-link>
+                <router-link to="/Login"><i class="fa-solid fa-right-to-bracket"></i>LOGIN</router-link>
+                <router-link to="/Register"><i class="fa-solid fa-registered"></i>REGISTER</router-link>
 
               </ul>
               <form class="d-flex" role="search">
-                <button type="button" class="btn btn-warning" style="">Login</button>
-                <button type="button" class="btn btn-warning">Register</button>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
@@ -49,7 +37,7 @@
 </script>
 
 <style scoped> 
-nav{
+nav li{
   color: yellow;
 }
 </style>
