@@ -1,40 +1,94 @@
 <template>
     <div>
         <div class="container">
-    <div class="row">
-    <h1>
-      USERS
-    </h1>
-  </div>
+          <h2>Users</h2>
+            <button
+          class="btnAddUser"
+          data-bs-toggle="modal"
+          data-bs-target="#addAccomodation"
+        >
+          <i class="fa-solid fa-plus"></i> New User
+        </button>
   <div class="row">
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">firstname</th>
-      <th scope="col">lastname</th>
-      <th scope="col">userProfile</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Cell Number (+27)</th>
+      <th scope="col">User Role</th>
+      <th scope="col">Join Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
     <tr  v-for="user in users" :key="user.userID">
-     <th scope="row">{{user.lastname}}</th>
-      <td>{{ user.firstname }}</td>
-      <td>
+      <td> {{ user.firstName }}</td>
+      <td> {{ user.lastName }}</td>
+      <td> {{ user.emailAdd }}</td>
+      <td> {{ user.gender }}</td>
+      <td> {{ user.cellphoneNumber }}</td>
+      <td> {{ user.userRole }}</td>
+      <td> {{ user.joinDate }}</td>
+      <!-- <td>
         <img :src="user.userProfile" :alt=user.firstname>
-      </td>
+      </td> -->
     </tr>
   </tbody>
 </table>
   </div>
   </div>
     </div>
+
+    <div>
+      <div class="container">
+        <h2>Products</h2>
+          <button
+        class="btnAddProduct"
+        data-bs-toggle="modal"
+        data-bs-target="#addAccomodation"
+      >
+        <i class="fa-solid fa-plus"></i> Accomodation
+      </button>
+      <button  class="btnSort">
+        <i class="fas fa-sort"></i> Sort by Price
+      </button>
+<div class="row">
+  <table class="table">
+<thead>
+  <tr>
+    <th scope="col">Product</th>
+    <th scope="col">Price</th>
+    <th scope="col">Categoory</th>
+    <th scope="col">QTY</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <tr  v-for="product in products" :key="product.id">
+    <td> {{ product.prodName }}</td>
+    <td> {{ product.price }}</td>
+    <td> {{ product.category }}</td>
+    <td> {{ product.prodQuantity }}</td>
+    
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </template>
 <script>
 import {computed} from '@vue/runtime-core';
-import {useStore} from 'vuex';
+import { useStore } from 'vuex';
+
 export default{
   setup(){
-    const store=useStore();
+    const store = useStore();
     store.dispatch('fetchUsers');
     const users =
     computed(()=>store.state.users);
@@ -44,8 +98,15 @@ export default{
   }
 }
 </script>
-<style scoped>
-thead tr th{
-    color:aliceblue;
+<style>
+.btnAddUser, .btnAddProduct, .btnSort{
+  border: none;
+  color:#633075;
+  background-color: transparent;
+  font-size: 1.5rem;
+  margin:1rem;
 }
+
+
+
 </style>

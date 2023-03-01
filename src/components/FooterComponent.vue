@@ -27,7 +27,7 @@ export default {
 <style scoped>
     footer {
       position: relative;
-      background-color: yellow;
+      background-color: #633075;
       min-height: 10%;
       width: auto;
       padding: 1em 3em;

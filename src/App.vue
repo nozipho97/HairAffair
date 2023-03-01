@@ -25,18 +25,25 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: yellow;
+  color:#bb2693;
   background: fixed;
-  background-color: black;
+  background-color: white;
 }
 nav {
   padding: 50px;
 }
 nav a {
   font-weight: bold;
-  color:black;
+  color:#bb2693;
   text-decoration: none;
   padding-left: 20px;
 }
+h2{
+  color: #633075;
+  text-align: center;
+  font-weight: bold;
+  font-size:5rem;
+}
+
 
 </style>

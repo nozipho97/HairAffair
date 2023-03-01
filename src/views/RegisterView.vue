@@ -31,23 +31,18 @@ export default {
     margin: 0 auto;
     padding: 30px;
     background-color:black;
-    box-shadow: 30px 0px 10px rgb(#ffff00);
+    box-shadow: 30px 0px 10px rgb(#633075);
     border-radius: 5px;
     margin-bottom: 5%;
     margin-top:5% ;
     
   }
   
-  h2 {
-    margin-top: 0;
-    color: yellow;
-    text-align: center;
-  }
   
   label {
     display: block;
     margin-bottom: 10px;
-    color: yellow;
+    color: #633075;
     text-align: center;
   }
   
@@ -57,11 +52,11 @@ export default {
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px yellow;
+    box-shadow: 0px 0px 5px #633075;
   }
   
   button[type="submit"] {
-    background-color: yellow;
+    background-color: #633075;
     color: #fff;
     padding: 10px 20px;
     border: none;
