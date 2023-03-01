@@ -19,7 +19,7 @@ app.use(
   cors(),
   cookieParser(),
   express.json,
-  express.urlencoded({ extended: false })
+  express.urlencoded({ extended: true })
 );
 
 app.listen(port, () => {
