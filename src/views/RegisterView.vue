@@ -30,7 +30,6 @@ export default {
     height: auto;
     margin: 0 auto;
     padding: 30px;
-    background-color:black;
     box-shadow: 30px 0px 10px rgb(#633075);
     border-radius: 5px;
     margin-bottom: 5%;

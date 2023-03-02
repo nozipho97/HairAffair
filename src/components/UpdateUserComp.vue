@@ -48,7 +48,7 @@ import axios from "axios";
         async getProductById() {
           try {
             const response = await axios.get(
-              `http://localhost:5000/products/${this.$route.params.id}`
+              `http://localhost:8080/products/${this.$route.params.id}`
             );
             this.productName = response.data.product_name;
             this.productPrice = response.data.product_price;

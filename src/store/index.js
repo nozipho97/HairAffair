@@ -9,7 +9,7 @@ export default createStore({
     products:null,
     product: null,
     showSpinner: null,
-    messege: null
+    messege: null,
   },
   getters: {
     getProducts: (state) => state.products,
@@ -47,5 +47,7 @@ export default createStore({
     },
   },
   modules: {
+    
   }
 })
+ 

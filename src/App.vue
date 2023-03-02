@@ -11,10 +11,12 @@
 <script>
 import NavbarComp from './components/NavbarComp.vue';
 import FooterComponent from './components/FooterComponent.vue';
+
 export default {
   components: {
     NavbarComp,
     FooterComponent
+  
   }
 }
 </script>
@@ -25,7 +27,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color:#bb2693;
+
   background: fixed;
   background-color: white;
 }
@@ -34,12 +36,12 @@ nav {
 }
 nav a {
   font-weight: bold;
-  color:#bb2693;
+  
   text-decoration: none;
   padding-left: 20px;
 }
 h2{
-  color: #633075;
+  
   text-align: center;
   font-weight: bold;
   font-size:5rem;

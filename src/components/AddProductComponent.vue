@@ -1,5 +1,5 @@
-<template>
-    <!-- <div>
+<!-- <template>
+    <div>
         <div class="field">
           <label class="label">Product Name</label>
           <div class="control">
@@ -29,4 +29,4 @@
         </div>
       </div> -->
     </template>
-</template>
+</template> -->
