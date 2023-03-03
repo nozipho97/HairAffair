@@ -10,7 +10,7 @@ route.get("^/$|/HairAffairs", (req, res) => {
 });
 
 //Login
-route.get("/login", bodyParser.json(), (req, res) => {
+route.post("/login", bodyParser.json(), (req, res) => {
   user.login(req, res);
 });
 

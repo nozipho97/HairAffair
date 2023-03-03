@@ -6,38 +6,38 @@ class User{
     login(req,res){
         const {emailAdd,userPass} = req.body;
         const strQry =
-        `
-        SEELECT
+        `SELECT
         userID ,firstName, lastName, gender, cellphoneNumber, emailAdd, userPass, 
         userRole, userProfile, joinDate
         FROM Users
-        Where emailAdd = ${emailAdd};
+        Where emailAdd = ?;
 
-        `;
-        db.query(strQry,async(err,data)=>{
+        `
+        db.query(strQry, [emailAdd], async(err,data)=>{
+            console.log(err,data)
             if(err) throw err;
             if((!data)||(data == null)){
                 res.status(401).json({err: `You've entered a wrong email address`})
             }else{
                 await compare(userPass, data[0].userPass,(cErr,cResult)=>{
                     if(cErr) throw cErr;
-                    const jwToken = createToken ({emailAdd,userPass})
-                    request.cookie('LegitUser',jwToken,{maxAge:3600000, httpOnly: true})
+                    const token = createToken ({emailAdd,userPass})
+                    res.cookie('CorrectUser',token,{maxAge:3600000, httpOnly: true})
                     if(cResult){
-                        request.status(200).json({
-                            msg: 'Logged in successfully', jwToken,result:data[0]
+                        res.status(200).json({
+                            msg: 'Logged in successfully', token,result:data[0]
                         })
                     }else{
                         res.status(401).json({
                             err:'You entere a wrong password/email address or you account does not exist'
-                        })
+                        });
                     }
 
-                })
+                });
 
             }
         
-        })
+        });
     }
     fetchUsers(req,res){
         const stryQry = 

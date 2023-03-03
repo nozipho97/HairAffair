@@ -6,17 +6,17 @@ const {sign, verify} = require('jsonwebtoken');
 function createToken(user) {
     return sign({
         emailAdd: user.emailAdd,
-        userPass: user.userPass
+        userPass: user.userPass,
     },
     process.env.SECRET_KEY,
     {
-        expiresIn: '2h'
+        expiresIn: '1h'
     });
 }
 //
 function verifyAToken(req, res, next) {
     try{
-        const token = req.cookies["LegitUser"] !== null ? req.cookies["LegitUser"] : 
+        const token = req.cookies["CorrectUser"] !== null ? req.cookies["CorrectUser"] : 
         "Please register" ;
         const isValid = null;
         if(token !== "Please register") {
@@ -34,4 +34,4 @@ function verifyAToken(req, res, next) {
         res.status(400).json({err: e.message});
     }
 }
-module.exports= {createToken, verifyAToken};
+module.exports = {createToken, verifyAToken};
