@@ -35,17 +35,7 @@
         products
       }
     },
-    // computed: {
-    //   products() {
-    //     return this.store.products
-    //   },
-    //   retrieveProducts() {
-    //     return product.filter((item) => {
-    //       item.prodName == SearchItem
-    //     }
-    //     )
-    //   },
-  // },
+    
   }
   
   
@@ -55,9 +45,14 @@
   <style scoped>
   
   .card{
-    padding: 0.5rem;
+    padding: 1rem;
     width:25rem;
+    padding-top: 1rem;
   
+  }
+  form{
+    padding-top: 2rem;
+    
   }
  
       

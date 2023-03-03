@@ -1,16 +1,6 @@
 <template>
   <footer>
-          <ul class="social_icon">
-            <a href="https://www.linkedin.com/in/thokozani-nqwili-5b5a8517a"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a href="https://www.instagram.com/_Hair Affairs/"
-              ><i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/Hair Affairs"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-          </ul>
+         
           <p>&copy;2023 Hair Affairs | All Rights Reserved</p>
   </footer>
    
@@ -73,7 +63,7 @@ export default {
       text-align: center;
       margin-top: 15px;
       margin-bottom: 10px;
-      font-size: 0.7em;
+      font-size: 2.5rem;
     }
     @media screen and (min-width: 300px) and (max-width: 720px) {
       footer .menu {

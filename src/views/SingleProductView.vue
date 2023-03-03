@@ -9,8 +9,5 @@
 </template>
 
 <script>
-moreDetails( 'woocommerce', 'details_custom_button', 10 );
-function details_custom_button() {
-    echo`<a href="#" class="btn btn-dark">More details</a>`;
-}
+
 </script>

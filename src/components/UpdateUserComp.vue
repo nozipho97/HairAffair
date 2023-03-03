@@ -30,50 +30,5 @@
 </template>
 
 <script>
-import axios from "axios";
-    
-    export default {
-      name: "EditProduct",
-      data() {
-        return {
-          productName: "",
-          productPrice: "",
-        };
-      },
-      created: function () {
-        this.getProductById();
-      },
-      methods: {
-        // Get Product By Id
-        async getProductById() {
-          try {
-            const response = await axios.get(
-              `http://localhost:8080/products/${this.$route.params.id}`
-            );
-            this.productName = response.data.product_name;
-            this.productPrice = response.data.product_price;
-          } catch (err) {
-            return(err);
-          }
-        },
-      
-        // Update product
-        async updateProduct() {
-          try {
-            await axios.put(
-              `http://localhost:8080/products/${this.$route.params.id}`,
-              {
-                product_name: this.productName,
-                product_price: this.productPrice,
-              }
-            );
-            this.productName = "";
-            this.productPrice = "";
-            this.$router.push("/");
-          } catch (err) {
-            return(err);
-          }
-        },
-      },
-    };
+
 </script>

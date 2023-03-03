@@ -33,9 +33,9 @@
       <td> {{ user.cellphoneNumber }}</td>
       <td> {{ user.userRole }}</td>
       <td> {{ user.joinDate }}</td>
-      <!-- <td>
-        <img :src="user.userProfile" :alt=user.firstname>
-      </td> -->
+      <td><button type="button" class="btn btn-dark">Edit</button></td>
+      <td><button type="button" class="btn btn-dark">Delete</button></td>
+     
     </tr>
   </tbody>
 </table>
@@ -74,8 +74,8 @@
     <td> {{ product.price }}</td>
     <td> {{ product.category }}</td>
     <td> {{ product.prodQuantity }}</td>
-    <td><i class="fa-light fa-pen-to-square" @click="updateProduct"></i></td>
-    <td><i class="fa-thin fa-delete-left" @click="deleteProduct(item.product_id)" ></i></td>
+    <td><button type="button" name="click" class="btn btn-dark">Edit</button></td>
+    <td><button type="button" name="click2" class="btn btn-dark">Delete</button></td>
     </tr>
 </tbody>
 </table>
@@ -105,51 +105,9 @@ export default {
       users, products
 
     }
-  }
+  },
+  
 }
-
-
-  
-  
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const sortbyPrice = document.querySelector(".btnSort");
-
-//   sortbyPrice.addEventLister("click", (e) => {
-//     product.sort((p1, p2) =>
-//       p1.price < p2.price ? 1 : p1.price > p2.price ? -1 : 0
-//     );
-//     console.table(products);
-
-    
-//   })
-
-
-
-
-
-
-
 
 
 
@@ -161,6 +119,17 @@ export default {
   background-color: transparent;
   font-size: 1.5rem;
   margin:1rem;
+  cursor: pointer;
+}
+
+.card{
+  width: 20px;
+  padding-top: 5rem;
+
+}
+.container{
+  padding-top: 2rem;
+  cursor: pointer;
 }
 
 

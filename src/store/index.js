@@ -4,16 +4,16 @@ const homeAffairsURL = 'https://hairaffair.onrender.com/';
 
 export default createStore({
   state: {
-    users:null,
-    user:null,
-    products:null,
+    users: null,
+    user: null,
+    products: null,
     product: null,
-    showSpinner: null,
-    messege: null,
+    showSpinner: true,
+    message: null,
   },
   getters: {
     getProducts: (state) => state.products,
-    getUsers:(state) => state.users
+    getUsers: (state) => state.users
   },
   mutations: {
     setUsers(state, values) {
@@ -27,17 +27,22 @@ export default createStore({
     },
     setProduct(state, values) {
       state.product = values;
+    },
+    setMessage(state, value) {
+      state.message = value
+    },
+    setSpinner(state, value) {
+      state.showSpinner = value
     }
-    
   },
   actions: {
     async fetchUsers(context) {
       const res = await axios.get(`${homeAffairsURL}users`);
       const { results, err } = await res.data;
       if (results) {
-        context.commit(`setUsers`,results)
+        context.commit(`setUsers`, results)
       } else {
-        context.commit('setMessege',err)
+        context.commit('setMessege', err)
       }
     },
     fetchProducts: async (context) => {
@@ -45,9 +50,53 @@ export default createStore({
       const { results } = response.data;
       context.commit("setProducts", results);
     },
+    async register(context, payload) {
+      const res = await axios.post(`${homeAffairsURL}register`, payload);
+      const { msg, err } = await res.data;
+      if (msg) {
+        context.commit('setMessage', msg)
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
+    async login(context, payload) {
+      const res = await axios.post(`${homeAffairsURL}login`, payload);
+      const { msg, err } = await res.data;
+      if (msg) {
+        context.commit('setMessage', msg)
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
+    async deleteUser(context, payload) {
+      const res = await axios.post(`${homeAffairsURL}delete`, payload);
+      const { msg, err } = await res.data;
+      if (msg) {
+        context.commit('setMessage', msg)
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
+    async UpdateUser(context, payload) {
+      const res = await axios.put(`${homeAffairsURL}UpdateUser`, payload);
+      const { msg, err } = await res.data;
+      if (msg) {
+        context.commit('setMessage', msg)
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
+    async updateProduct(context, payload) {
+      const res = await axios.put(`${homeAffairsURL}updateProduct`, payload);
+      const { msg, err } = await res.data;
+      if (msg) {
+        context.commit('setMessage', msg)
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
   },
-  modules: {
-    
+    modules: {
+      
   }
-})
- 
+});

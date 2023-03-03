@@ -8,26 +8,34 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+            <a class="nav-link active" aria-current="page" href="/Home"><i class="fa-solid fa-house fa-bounce"></i>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Products">Products</a>
+            <a class="nav-link" href="/Products"><i class="fa-brands fa-product-hunt fa-bounce"></i>Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Admin">Admin</a>
+            <a class="nav-link" href="/Admin"><i class="fa-solid fa-lock fa-bounce"></i>Admin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Contact">Contact</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="/Login">Sign Up</a>
+            <a class="nav-link" href="/Contact"><i class="fa-solid fa-address-book fa-bounce"></i>Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Register">Register</a>
+            <a class="nav-link" href="/Login"><i class="fa-solid fa-user fa-bounce"></i> Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Register"><i class="fa-solid fa-registered fa-bounce"></i> Register</a>
           </li>
           </ul>
+        
+
+        <!-- <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="/Login"><i class="fa-solid fa-user"></i>Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Register"><i class="fa-solid fa-registered"></i>Register</a>
+          </li>
+          </ul> -->
 
         
 
